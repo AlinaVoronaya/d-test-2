@@ -1,525 +1,907 @@
-// ---------RESET----------
-* {
-    padding: 0;
-    margin: 0;
-}
-
-*,
-*:before,
-*:after {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-}
-
-:focus,
-:active {
-    outline: none;
-}
-
-a:focus,
-a:active {
-    outline: none;
-}
-
-nav,
-footer,
-header,
-aside {
-    display: block;
-}
-
-html,
-body {
-    height: 100%;
-    width: 100%;
-    font-size: 100%;
-    line-height: 1;
-    font-size: 14px;
-    -ms-text-size-adjust: 100%;
-    -moz-text-size-adjust: 100%;
-    -webkit-text-size-adjust: 100%;
-}
-
-input,
-button,
-textarea {
-    font-family: inherit;
-}
-
-input::-ms-clear {
-    display: none;
-}
-
-button {
-    cursor: pointer;
-}
-
-button::-moz-focus-inner {
-    padding: 0;
-    border: 0;
-}
-
-a,
-a:visited {
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: none;
-}
-
-ul li {
-    list-style: none;
-}
-
-img {
-    vertical-align: top;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-size: inherit;
-    font-weight: 400;
-}
-
-// --------------------------------------------
-@font-face {
-    font-family: "Galien";
-    src: url(../fonts/Galien/OTF/Galien-Bold.otf);
-    font-style: normal;
-    font-weight: 700;
-}
-
-@import "../fonts/gilroy-light.css";
-@import "../fonts/gilroy-regular.css";
-@import "../fonts/gilroy-medium.css";
-@import "../fonts/gilroy-semibold.css";
-@import "../fonts/gilroy-bold.css";
-$basic-font-color: #1F3F68;
-@mixin container {
-    max-width: 980px;
-    margin: 0 auto;
-}
-
-@mixin galien-700 {
-    font-family: 'Galien';
-    font-weight: 700;
-}
-
-@mixin gilroy-400 {
-    font-family: 'Gilroy';
-    font-weight: 400;
-}
-
-@mixin gilroy-500 {
-    font-family: 'Gilroy';
-    font-weight: 500;
-}
-
-.hero {
-    padding: 40px 20px;
-    position: relative;
-    margin-bottom: 180px;
-    &::before {
-        content: '';
-        width: 100%;
-        height: 100%;
-        left: 0;
-        top: 0;
-        position: absolute;
-        background: linear-gradient(0deg, #98C3E8 8.84%, rgba(152, 195, 232, 0) 31.12%);
-        opacity: 0.2;
-        background-size: contain;
-        z-index: -1;
+    // ---------RESET----------
+    * {
+        padding: 0;
+        margin: 0;
     }
-    &__container-header {
-        max-width: 1240px;
+    
+    *,
+    *:before,
+    *:after {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+    
+     :focus,
+     :active {
+        outline: none;
+    }
+    
+    a:focus,
+    a:active {
+        outline: none;
+    }
+    
+    nav,
+    footer,
+    header,
+    aside {
+        display: block;
+    }
+    
+    html,
+    body {
+        height: 100%;
+        width: 100%;
+        font-size: 100%;
+        line-height: 1;
+        font-size: 14px;
+        -ms-text-size-adjust: 100%;
+        -moz-text-size-adjust: 100%;
+        -webkit-text-size-adjust: 100%;
+    }
+    
+    input,
+    button,
+    textarea {
+        font-family: inherit;
+    }
+    
+    input::-ms-clear {
+        display: none;
+    }
+    
+    button {
+        cursor: pointer;
+    }
+    
+    button::-moz-focus-inner {
+        padding: 0;
+        border: 0;
+    }
+    
+    a,
+    a:visited {
+        text-decoration: none;
+    }
+    
+    a:hover {
+        text-decoration: none;
+    }
+    
+    ul li {
+        list-style: none;
+    }
+    
+    img {
+        vertical-align: top;
+    }
+    
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-size: inherit;
+        font-weight: 400;
+    }
+    
+    // --------------------------------------------
+    @font-face {
+        font-family: "Galien";
+        src: url(../fonts/Galien/OTF/Galien-Bold.otf);
+        font-style: normal;
+        font-weight: 700;
+    }
+    
+    @import "../fonts/gilroy-light.css";
+    @import "../fonts/gilroy-regular.css";
+    @import "../fonts/gilroy-medium.css";
+    @import "../fonts/gilroy-semibold.css";
+    @import "../fonts/gilroy-bold.css";
+    $basic-font-color: #1F3F68;
+    @mixin container {
+        max-width: 980px;
         margin: 0 auto;
     }
-    &__container-main {
-        @include container();
+    
+    @mixin galien-700 {
+        font-family: 'Galien';
+        font-weight: 700;
     }
-    &__header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 100px;
+    
+    @mixin gilroy-400 {
+        font-family: 'Gilroy';
+        font-weight: 400;
     }
-    &__title {
-        @include galien-700;
-        font-size: 64px;
-        line-height: 74px;
-        letter-spacing: 0.04em;
-        color: $basic-font-color;
-        max-width: 520px;
-        margin-bottom: 32px;
+    
+    @mixin gilroy-500 {
+        font-family: 'Gilroy';
+        font-weight: 500;
     }
-    &__text {
-        @include gilroy-400;
-        font-size: 16px;
-        line-height: 26px;
-        color: $basic-font-color;
-        opacity: 0.6;
-        max-width: 400px;
-        margin-bottom: 71px;
-    }
-    &__btn {
-        margin-bottom: 190px;
-    }
-    &__btn__link {
-        @include gilroy-400;
-        font-size: 16px;
-        line-height: 26px;
-        letter-spacing: 0.04em;
-        padding: 15px 48px;
-        color: #fff;
-        background: #5A98D0;
-        box-shadow: 5px 10px 20px rgba(53, 110, 173, 0.2);
-        border-radius: 10px;
-    }
-    &__img {
-        position: absolute;
-        // width: 687px;
-        // height: 612px;
-        left: 50vw;
-        top: 100px;
-        object-fit: cover;
-        z-index: -2;
-    }
-}
-
-.suggestion {
-    margin-bottom: 212px;
-    padding: 0 20px;
-    &__container {
-        @include container();
-    }
-    &__text {
-        @include gilroy-500;
-        font-size: 36px;
-        line-height: 46px;
-        letter-spacing: 0.05em;
-        color: #316099;
-        max-width: 365px;
-        margin-bottom: -138px;
-    }
-    &__cards {
-        display: grid;
-        gap: 100px;
-        grid-template-columns: 380px 380px;
-        grid-template-areas: 'card1 card2' 'card1 card3';
-        padding-left: 56px;
-    }
-    &__card {
-        box-shadow: 5px 20px 50px rgba(16, 112, 177, 0.2);
-        border-radius: 10px;
-        padding: 48px 48px 0 48px;
-        display: grid;
+    
+    .hero {
+        padding: 40px 20px;
+        position: relative;
+        margin-bottom: 180px;
+        &::before {
+            content: '';
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            position: absolute;
+            background: linear-gradient(0deg, #98C3E8 8.84%, rgba(152, 195, 232, 0) 31.12%);
+            opacity: 0.2;
+            background-size: contain;
+            z-index: -1;
+        }
+        &__container-header {
+            max-width: 1240px;
+            margin: 0 auto;
+        }
+        &__container-main {
+            @include container();
+        }
+        &__header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 100px;
+        }
+        &__title {
+            @include galien-700;
+            font-size: 64px;
+            line-height: 74px;
+            letter-spacing: 0.04em;
+            color: $basic-font-color;
+            max-width: 520px;
+            margin-bottom: 32px;
+        }
+        &__text {
+            @include gilroy-400;
+            font-size: 16px;
+            line-height: 26px;
+            color: $basic-font-color;
+            opacity: 0.6;
+            max-width: 400px;
+            margin-bottom: 71px;
+        }
+        &__btn {
+            margin-bottom: 150px;
+        }
+        &__btn__link {
+            @include gilroy-400;
+            font-size: 16px;
+            line-height: 26px;
+            letter-spacing: 0.04em;
+            padding: 15px 48px;
+            color: #fff;
+            background: #5A98D0;
+            box-shadow: 5px 10px 20px rgba(53, 110, 173, 0.2);
+            border-radius: 10px;
+        }
         &__img {
-            margin: 0 auto 56px auto;
+            position: absolute;
+            width: 687px;
+            height: 612px;
+            left: 50vw;
+            top: 100px;
+            object-fit: cover;
+            z-index: -2;
+        }
+    }
+    
+    .suggestion {
+        margin-bottom: 212px;
+        padding: 0 20px;
+        &__container {
+            @include container();
+        }
+        &__text {
+            @include gilroy-500;
+            font-size: 36px;
+            line-height: 46px;
+            letter-spacing: 0.05em;
+            color: #316099;
+            max-width: 365px;
+            margin-bottom: -138px;
+        }
+        &__cards {
+            @media (min-width: 991.98px) {
+                display: grid;
+                gap: 100px;
+                grid-template-columns: 380px 380px;
+                grid-template-areas: 'card1 card2' 'card1 card3';
+                padding-left: 56px;
+            }
+        }
+        &__card {
+            @media (min-width: 991.98px) {
+                box-shadow: 5px 20px 50px rgba(16, 112, 177, 0.2);
+                border-radius: 10px;
+                padding: 48px 48px 0 48px;
+                display: grid;
+                &__img {
+                    margin: 0 auto 56px auto;
+                }
+                &__title {
+                    @include gilroy-500;
+                    font-size: 20px;
+                    line-height: 30px;
+                    letter-spacing: 0.05em;
+                    color: $basic-font-color;
+                    margin-bottom: 16px;
+                }
+                &__text {
+                    @include gilroy-400;
+                    font-size: 16px;
+                    line-height: 26px;
+                    letter-spacing: 0.05em;
+                    color: $basic-font-color;
+                    margin-bottom: 32px;
+                }
+                &__link {
+                    @include gilroy-500;
+                    font-size: 14px;
+                    line-height: 30px;
+                    letter-spacing: 0.05em;
+                    margin-bottom: 48px;
+                    & a {
+                        color: #5A98D0;
+                        &::after {
+                            content: url('../images/arrow.svg');
+                            position: relative;
+                            left: 24px;
+                            top: 7px;
+                        }
+                    }
+                }
+                &:nth-child(1) {
+                    grid-area: card1;
+                    align-self: center;
+                }
+                &:nth-child(2) {
+                    grid-area: card2;
+                    padding-top: 0;
+                }
+                &:nth-child(3) {
+                    grid-area: card3;
+                }
+            }
+        }
+    }
+    
+    .client {
+        background: #5A98D0;
+        border-radius: 200px 0px 0px 0px;
+        padding: 96px 20px 127px 20px;
+        &__container {
+            @include container();
+        }
+        &__box {
+            display: flex;
+            gap: 97px;
+            margin-bottom: 111px;
         }
         &__title {
             @include gilroy-500;
-            font-size: 20px;
-            line-height: 30px;
+            font-size: 36px;
+            line-height: 46px;
             letter-spacing: 0.05em;
-            color: $basic-font-color;
-            margin-bottom: 16px;
+            color: #FFFFFF;
+            width: 230px;
         }
         &__text {
             @include gilroy-400;
             font-size: 16px;
             line-height: 26px;
             letter-spacing: 0.05em;
-            color: $basic-font-color;
-            margin-bottom: 32px;
+            color: #FFFFFF;
+            width: 540px;
         }
-        &__link {
-            @include gilroy-500;
-            font-size: 14px;
-            line-height: 30px;
-            letter-spacing: 0.05em;
-            margin-bottom: 48px;
-            & a {
-                color: #5A98D0;
-                &::after {
-                    content: url('../images/arrow.svg');
-                    position: relative;
-                    left: 24px;
-                    top: 7px;
+        &__table {
+            display: grid;
+            grid-template: repeat(2, 128px)/repeat(4, 1fr);
+            align-items: center;
+            gap: 0;
+            & div {
+                text-align: center;
+                @include gilroy-500;
+                font-size: 20px;
+                line-height: 46px;
+                letter-spacing: 0.02em;
+                color: #FFFFFF;
+                border-right: 1px solid #FFFFFF;
+                border-bottom: 1px solid #FFFFFF;
+                padding: 40px;
+                &:nth-child(4) {
+                    border-right: 0;
+                }
+                &:nth-child(5) {
+                    border-bottom: 0;
+                }
+                &:nth-child(6) {
+                    border-bottom: 0;
+                }
+                &:nth-child(7) {
+                    border-bottom: 0;
+                }
+                &:nth-child(8) {
+                    border-bottom: 0;
+                    border-right: 0;
+                    background: rgba(31, 63, 104, .2);
                 }
             }
         }
-        &:nth-child(1) {
-            grid-area: card1;
-            align-self: center;
-        }
-        &:nth-child(2) {
-            grid-area: card2;
-            padding-top: 0;
-        }
-        &:nth-child(3) {
-            grid-area: card3;
-        }
     }
-}
-
-.client {
-    background: #5A98D0;
-    border-radius: 200px 0px 0px 0px;
-    padding: 96px 20px 127px 20px;
-    &__container {
-        @include container();
-    }
-    &__box {
-        display: flex;
-        gap: 97px;
-        margin-bottom: 111px;
-    }
-    &__title {
-        @include gilroy-500;
-        font-size: 36px;
-        line-height: 46px;
-        letter-spacing: 0.05em;
-        color: #FFFFFF;
-        width: 230px;
-    }
-    &__text {
-        @include gilroy-400;
-        font-size: 16px;
-        line-height: 26px;
-        letter-spacing: 0.05em;
-        color: #FFFFFF;
-        width: 540px;
-    }
-    &__table {
-        border-collapse: collapse;
-        text-align: center;
-        @include gilroy-500;
-        font-size: 20px;
-        line-height: 46px;
-        letter-spacing: 0.02em;
-        color: #FFFFFF;
-        & td {
-            padding: 41px 46px;
-            border-right: 1px solid #FFFFFF;
-        }
-        & tr td:last-child {
-            border-right: 0;
-        }
-        & tr:first-child {
-            border-bottom: 1px solid #FFFFFF;
-        }
-        & tr:last-child td:last-child {
-            background: rgba(31, 63, 104, .2);
+    
+    .bottom {
+        background: #5A98D0;
+        padding-right: 90px;
+        position: relative;
+        &__wrapper {
+            background: #316099;
+            border-radius: 0px 200px 0px 0px;
         }
     }
-}
-
-.bottom {
-    background: #5A98D0;
-    padding-right: 90px;
-    position: relative;
-    &__wrapper {
-        background: #316099;
-        border-radius: 0px 200px 0px 0px;
-    }
-}
-
-.work {
-    padding: 91px 0 0 70px;
-    &__container {
-        @include container();
-    }
-    &__team {
-        display: flex;
-        gap: 180px;
-        align-items: center;
-        margin-bottom: 193px;
-    }
-    &__info {
-        max-height: 205px;
-    }
-    &__title {
-        @include gilroy-500;
-        font-size: 36px;
-        line-height: 46px;
-        letter-spacing: 0.05em;
-        color: #FFFFFF;
-        margin-bottom: 32px;
-        max-width: 317px;
-    }
-    &__text {
-        @include gilroy-400;
-        font-size: 16px;
-        line-height: 26px;
-        letter-spacing: 0.05em;
-        color: #FFFFFF;
-        opacity: 0.6;
-        max-width: 460px;
-        margin-bottom: 96px;
-    }
-    &__btn {
-        max-height: 56px;
-        &__link {
+    
+    .work {
+        padding: 91px 0 0 70px;
+        &__container {
+            @include container();
+        }
+        &__team {
+            display: flex;
+            gap: 180px;
+            align-items: center;
+            margin-bottom: 193px;
+        }
+        &__info {
+            max-height: 205px;
+        }
+        &__title {
+            @include gilroy-500;
+            font-size: 36px;
+            line-height: 46px;
+            letter-spacing: 0.05em;
+            color: #FFFFFF;
+            margin-bottom: 32px;
+            max-width: 317px;
+        }
+        &__text {
             @include gilroy-400;
             font-size: 16px;
             line-height: 26px;
-            letter-spacing: 0.04em;
-            padding: 15px 75px;
-            color: #fff;
-            background: #5A98D0;
-            box-shadow: 5px 10px 20px rgba(53, 110, 173, 0.2);
-            border-radius: 10px;
-        }
-    }
-    &__line {
-        height: 1px;
-        background: #FFFFFF;
-        opacity: 0.4;
-        position: absolute;
-        left: 0;
-        width: 78%;
-        top: 390px;
-    }
-}
-
-.footer {
-    padding: 0 0 0 70px;
-    &__container {
-        @include container();
-    }
-    &__menu {
-        display: flex;
-        margin-bottom: 64px;
-    }
-    &__afrianska {
-        @include gilroy-400;
-        font-size: 16px;
-        line-height: 26px;
-        letter-spacing: 0.05em;
-        color: #FFFFFF;
-        max-width: 264px;
-        margin-right: 100px;
-        text-indent: -5px;
-        & li {
-            margin-bottom: 24px;
-            &:nth-child(1) {
-                position: relative;
-                padding-left: 35px;
-                &::before {
-                    content: 'A.';
-                    position: absolute;
-                    left: 0;
-                }
-            }
-            &:nth-child(2) {
-                position: relative;
-                padding-left: 35px;
-                &::before {
-                    content: 'T.';
-                    position: absolute;
-                    left: 0;
-                }
-            }
-            &:nth-child(3) {
-                position: relative;
-                padding-left: 35px;
-                &::before {
-                    content: 'E.';
-                    position: absolute;
-                    left: 0;
-                }
-            }
-        }
-        &__title {
-            @include gilroy-500;
-            font-size: 28px;
-            line-height: 46px;
-            letter-spacing: 0.02em;
+            letter-spacing: 0.05em;
             color: #FFFFFF;
-            margin-bottom: 33px;
-            padding-left: 70px;
+            opacity: 0.6;
+            max-width: 460px;
+            margin-bottom: 96px;
+        }
+        &__btn {
+            max-height: 56px;
+            &__link {
+                @include gilroy-400;
+                font-size: 16px;
+                line-height: 26px;
+                letter-spacing: 0.04em;
+                padding: 15px 75px;
+                color: #fff;
+                background: #5A98D0;
+                box-shadow: 5px 10px 20px rgba(53, 110, 173, 0.2);
+                border-radius: 10px;
+            }
+        }
+        &__line {
+            height: 1px;
+            background: #FFFFFF;
+            opacity: 0.4;
+            position: absolute;
+            left: 0;
+            width: 78%;
+            top: 390px;
+        }
+    }
+    
+    .footer {
+        padding: 0 0 0 70px;
+        &__container {
+            @include container();
+        }
+        &__menu {
+            display: flex;
+            margin-bottom: 64px;
+        }
+        &__afrianska {
+            @include gilroy-400;
+            font-size: 16px;
+            line-height: 26px;
+            letter-spacing: 0.05em;
+            color: #FFFFFF;
+            max-width: 264px;
+            margin-right: 100px;
+            text-indent: -5px;
+            & li {
+                margin-bottom: 24px;
+                &:nth-child(1) {
+                    position: relative;
+                    padding-left: 35px;
+                    &::before {
+                        content: 'A.';
+                        position: absolute;
+                        left: 0;
+                    }
+                }
+                &:nth-child(2) {
+                    position: relative;
+                    padding-left: 35px;
+                    &::before {
+                        content: 'T.';
+                        position: absolute;
+                        left: 0;
+                    }
+                }
+                &:nth-child(3) {
+                    position: relative;
+                    padding-left: 35px;
+                    &::before {
+                        content: 'E.';
+                        position: absolute;
+                        left: 0;
+                    }
+                }
+            }
+            &__title {
+                @include gilroy-500;
+                font-size: 28px;
+                line-height: 46px;
+                letter-spacing: 0.02em;
+                color: #FFFFFF;
+                margin-bottom: 33px;
+                padding-left: 70px;
+                position: relative;
+                &::before {
+                    content: url('../images/logo-footer.svg');
+                    position: absolute;
+                    left: 0;
+                }
+            }
+        }
+        &__about {
+            @include gilroy-400;
+            font-size: 16px;
+            line-height: 26px;
+            letter-spacing: 0.05em;
+            color: #FFFFFF;
+            max-width: 264px;
+            margin-right: 77px;
+            & li {
+                margin-bottom: 16px;
+            }
+            &__title {
+                @include gilroy-500;
+                font-size: 20px;
+                line-height: 30px;
+                letter-spacing: 0.05em;
+                color: #FFFFFF;
+                margin-bottom: 32px;
+            }
+        }
+        &__follow {
+            @include gilroy-400;
+            font-size: 16px;
+            line-height: 26px;
+            letter-spacing: 0.05em;
+            color: #FFFFFF;
+            max-width: 264px;
+            & li {
+                margin-bottom: 16px;
+            }
+            &__title {
+                @include gilroy-500;
+                font-size: 20px;
+                line-height: 30px;
+                letter-spacing: 0.05em;
+                color: #FFFFFF;
+                margin-bottom: 32px;
+            }
+        }
+        &__copyright {
+            padding-bottom: 64px;
+            @include gilroy-400;
+            font-size: 16px;
+            line-height: 26px;
+            letter-spacing: 0.05em;
+            color: #FFFFFF;
+            opacity: 0.4;
+        }
+    }
+    
+    @media (max-width: 1399.98px) {
+        .hero__img {
+            img {
+                width: 584px;
+                height: 520px;
+            }
+            left: 45vw;
+            top: 140px;
+        }
+    }
+    
+    @media (max-width: 1139.98px) {
+        .hero {
+            margin-bottom: 150px;
+            &__header {
+                margin-bottom: 80px;
+            }
+            &__title {
+                font-size: calc(20px + (64 - 20) * ((100vw - 320px) / (1140 - 320)));
+                line-height: calc(40px + (74 - 40) * ((100vw - 320px) / (1140 - 320)));
+                max-width: 520px;
+                margin-bottom: 28px;
+            }
+            &__img {
+                img {
+                    width: 496px;
+                    height: 442px;
+                }
+                left: 45vw;
+                top: 140px;
+            }
+            &__btn {
+                margin-bottom: 110px;
+            }
+            &__btn__link {
+                font-size: 14px;
+                line-height: 24px;
+                padding: 13px 42px;
+            }
+        }
+        .client {
+            padding: 96px 20px 116px 60px;
+        }
+        .work {
+            padding: 91px 0 0 70px;
+            &__container {
+                @include container();
+            }
+            &__team {
+                gap: 130px;
+            }
+            &__btn {
+                max-height: 50px;
+                &__link {
+                    padding: 15px 65px;
+                }
+            }
+        }
+    }
+    
+    @media (max-width: 991.98px) {
+        .hero {
+            margin-bottom: 100px;
+            &__header {
+                margin-bottom: 60px;
+            }
+            &__title {
+                max-width: 500px;
+                margin-bottom: 28px;
+            }
+            &__text {
+                margin-bottom: 65px;
+            }
+            &__btn {
+                margin-bottom: 130px;
+            }
+            &__btn__link {
+                line-height: 24px;
+            }
+            &__img {
+                img {
+                    width: 421px;
+                    height: 375px;
+                }
+                left: 42vw;
+                top: 200px;
+            }
+        }
+        .suggestion {
+            margin-bottom: 120px;
+            &__text {
+                font-size: 30px;
+                line-height: 40px;
+                max-width: 800px;
+                margin-bottom: 50px;
+            }
+            &__cards {
+                display: grid;
+                gap: 50px;
+                padding-left: 40px;
+            }
+            &__card {
+                box-shadow: 5px 20px 50px rgba(16, 112, 177, 0.2);
+                border-radius: 10px;
+                padding: 48px 48px 0 48px;
+                display: grid;
+                &__img {
+                    margin: 0 auto 56px auto;
+                }
+                &__title {
+                    @include gilroy-500;
+                    font-size: 20px;
+                    line-height: 30px;
+                    letter-spacing: 0.05em;
+                    color: $basic-font-color;
+                    margin-bottom: 16px;
+                }
+                &__text {
+                    @include gilroy-400;
+                    font-size: 16px;
+                    line-height: 26px;
+                    letter-spacing: 0.05em;
+                    color: $basic-font-color;
+                    margin-bottom: 32px;
+                }
+                &__link {
+                    @include gilroy-500;
+                    font-size: 14px;
+                    line-height: 30px;
+                    letter-spacing: 0.05em;
+                    margin-bottom: 48px;
+                    & a {
+                        color: #5A98D0;
+                        &::after {
+                            content: url('../images/arrow.svg');
+                            position: relative;
+                            left: 24px;
+                            top: 7px;
+                        }
+                    }
+                }
+                &:nth-child(2) {
+                    padding-top: 0;
+                }
+            }
+        }
+        .client {
+            padding: 96px 20px 127px 60px;
+            &__box {
+                gap: 70px;
+            }
+            &__title {
+                @include gilroy-500;
+                font-size: 28px;
+                line-height: 36px;
+                letter-spacing: 0.05em;
+                color: #FFFFFF;
+                width: 230px;
+            }
+            &__text {
+                @include gilroy-400;
+                font-size: 16px;
+                line-height: 26px;
+                letter-spacing: 0.05em;
+                color: #FFFFFF;
+                width: 540px;
+            }
+            &__table {
+                display: grid;
+                grid-template: repeat(2, 128px)/repeat(4, 1fr);
+                align-items: center;
+                gap: 0;
+                & div {
+                    text-align: center;
+                    @include gilroy-500;
+                    font-size: 20px;
+                    line-height: 46px;
+                    letter-spacing: 0.02em;
+                    color: #FFFFFF;
+                    border-right: 1px solid #FFFFFF;
+                    border-bottom: 1px solid #FFFFFF;
+                    padding: 40px;
+                    &:nth-child(4) {
+                        border-right: 0;
+                    }
+                    &:nth-child(5) {
+                        border-bottom: 0;
+                    }
+                    &:nth-child(6) {
+                        border-bottom: 0;
+                    }
+                    &:nth-child(7) {
+                        border-bottom: 0;
+                    }
+                    &:nth-child(8) {
+                        border-bottom: 0;
+                        border-right: 0;
+                        background: rgba(31, 63, 104, .2);
+                    }
+                }
+            }
+        }
+        .bottom {
+            background: #5A98D0;
+            padding-right: 90px;
             position: relative;
-            &::before {
-                content: url('../images/logo-footer.svg');
+            &__wrapper {
+                background: #316099;
+                border-radius: 0px 200px 0px 0px;
+            }
+        }
+        .work {
+            padding: 91px 0 0 70px;
+            &__container {
+                @include container();
+            }
+            &__team {
+                display: flex;
+                gap: 180px;
+                align-items: center;
+                margin-bottom: 193px;
+            }
+            &__info {
+                max-height: 205px;
+            }
+            &__title {
+                @include gilroy-500;
+                font-size: 36px;
+                line-height: 46px;
+                letter-spacing: 0.05em;
+                color: #FFFFFF;
+                margin-bottom: 32px;
+                max-width: 317px;
+            }
+            &__text {
+                @include gilroy-400;
+                font-size: 16px;
+                line-height: 26px;
+                letter-spacing: 0.05em;
+                color: #FFFFFF;
+                opacity: 0.6;
+                max-width: 460px;
+                margin-bottom: 96px;
+            }
+            &__btn {
+                max-height: 56px;
+                &__link {
+                    @include gilroy-400;
+                    font-size: 16px;
+                    line-height: 26px;
+                    letter-spacing: 0.04em;
+                    padding: 15px 75px;
+                    color: #fff;
+                    background: #5A98D0;
+                    box-shadow: 5px 10px 20px rgba(53, 110, 173, 0.2);
+                    border-radius: 10px;
+                }
+            }
+            &__line {
+                height: 1px;
+                background: #FFFFFF;
+                opacity: 0.4;
                 position: absolute;
                 left: 0;
+                width: 78%;
+                top: 390px;
+            }
+        }
+        .footer {
+            padding: 0 0 0 70px;
+            &__container {
+                @include container();
+            }
+            &__menu {
+                display: flex;
+                margin-bottom: 64px;
+            }
+            &__afrianska {
+                @include gilroy-400;
+                font-size: 16px;
+                line-height: 26px;
+                letter-spacing: 0.05em;
+                color: #FFFFFF;
+                max-width: 264px;
+                margin-right: 100px;
+                text-indent: -5px;
+                & li {
+                    margin-bottom: 24px;
+                    &:nth-child(1) {
+                        position: relative;
+                        padding-left: 35px;
+                        &::before {
+                            content: 'A.';
+                            position: absolute;
+                            left: 0;
+                        }
+                    }
+                    &:nth-child(2) {
+                        position: relative;
+                        padding-left: 35px;
+                        &::before {
+                            content: 'T.';
+                            position: absolute;
+                            left: 0;
+                        }
+                    }
+                    &:nth-child(3) {
+                        position: relative;
+                        padding-left: 35px;
+                        &::before {
+                            content: 'E.';
+                            position: absolute;
+                            left: 0;
+                        }
+                    }
+                }
+                &__title {
+                    @include gilroy-500;
+                    font-size: 28px;
+                    line-height: 46px;
+                    letter-spacing: 0.02em;
+                    color: #FFFFFF;
+                    margin-bottom: 33px;
+                    padding-left: 70px;
+                    position: relative;
+                    &::before {
+                        content: url('../images/logo-footer.svg');
+                        position: absolute;
+                        left: 0;
+                    }
+                }
+            }
+            &__about {
+                @include gilroy-400;
+                font-size: 16px;
+                line-height: 26px;
+                letter-spacing: 0.05em;
+                color: #FFFFFF;
+                max-width: 264px;
+                margin-right: 77px;
+                & li {
+                    margin-bottom: 16px;
+                }
+                &__title {
+                    @include gilroy-500;
+                    font-size: 20px;
+                    line-height: 30px;
+                    letter-spacing: 0.05em;
+                    color: #FFFFFF;
+                    margin-bottom: 32px;
+                }
+            }
+            &__follow {
+                @include gilroy-400;
+                font-size: 16px;
+                line-height: 26px;
+                letter-spacing: 0.05em;
+                color: #FFFFFF;
+                max-width: 264px;
+                & li {
+                    margin-bottom: 16px;
+                }
+                &__title {
+                    @include gilroy-500;
+                    font-size: 20px;
+                    line-height: 30px;
+                    letter-spacing: 0.05em;
+                    color: #FFFFFF;
+                    margin-bottom: 32px;
+                }
+            }
+            &__copyright {
+                padding-bottom: 64px;
+                @include gilroy-400;
+                font-size: 16px;
+                line-height: 26px;
+                letter-spacing: 0.05em;
+                color: #FFFFFF;
+                opacity: 0.4;
             }
         }
     }
-    &__about {
-        @include gilroy-400;
-        font-size: 16px;
-        line-height: 26px;
-        letter-spacing: 0.05em;
-        color: #FFFFFF;
-        max-width: 264px;
-        margin-right: 77px;
-        & li {
-            margin-bottom: 16px;
-        }
-        &__title {
-            @include gilroy-500;
-            font-size: 20px;
-            line-height: 30px;
-            letter-spacing: 0.05em;
-            color: #FFFFFF;
-            margin-bottom: 32px;
-        }
-    }
-    &__follow {
-        @include gilroy-400;
-        font-size: 16px;
-        line-height: 26px;
-        letter-spacing: 0.05em;
-        color: #FFFFFF;
-        max-width: 264px;
-        & li {
-            margin-bottom: 16px;
-        }
-        &__title {
-            @include gilroy-500;
-            font-size: 20px;
-            line-height: 30px;
-            letter-spacing: 0.05em;
-            color: #FFFFFF;
-            margin-bottom: 32px;
-        }
-    }
-    &__copyright {
-        padding-bottom: 64px;
-        @include gilroy-400;
-        font-size: 16px;
-        line-height: 26px;
-        letter-spacing: 0.05em;
-        color: #FFFFFF;
-        opacity: 0.4;
-    }
-}
-
-@media (max-width: 1399.98px) {
-    .hero__img {
-        img {
-            width: calc(200px + (600 - 200) * ((100vw - 320px) / (1140 - 320)));
-        }
-        width: 600px;
-        left: 50vw;
-    }
-}
-
-@media (max-width: 1139.98px) {
-    .hero__title {
-        font-size: calc(30px + (64 - 30) * ((100vw - 320px) / (1140 - 320)));
-        line-height: 74px;
-        letter-spacing: 0.04em;
-        color: $basic-font-color;
-        max-width: 520px;
-        margin-bottom: 32px;
-    }
-}
+    
+    @media (max-width: 767.98px) {}
+    
+    @media (max-width: 479.98px) {}
