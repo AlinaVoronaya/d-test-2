@@ -121,7 +121,7 @@
                             <p class="work__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
                         </div>
                         <div class="work__btn">
-                            <a href="#" class="work__btn__link">Let’s Talk</a>
+                            <a href="#" id="modal-btn" class="work__btn__link">Let’s Talk</a>
                         </div>
                     </div>
                 </div>
@@ -165,36 +165,46 @@
         </div>
     </div>
 
-    <div class="modal" id="jsModal">
+    <div class="modal" id="modal">
+        <div class="modal__overlay" id="overlay"></div>
         <div class="modal__body">
             <div class="modal__content">
-                <button class="modal__close">&#10005</button>
-                <div class="form__container">
+                <button id="modal-close" class="modal__close">&#10005</button>
+                <div class="form">
                     <div class="form__title">
                         <h2>SEND US MESSAGE</h2>
                     </div>
-                    <form action="index.html" class="form-box" method="post" id="form">
-                        <div class="form-input">
-                            <div class="form-input-item">
-                                <label for="username" class="label"> Full Name</label>
-                                <input type="text" name="username" placeholder="Your Name" id="username">
+                    <form action="index.html" method="post" id="form">
+                        <div class="form__input">
+                            <div class="form__input__item">
+                                <label for="username" class="form__label"> Full Name</label>
+                                <input type="text" validate name="username" placeholder="Your Name" id="username">
+                                <div class="form__error">Заполните поле!</div>
                             </div>
-                            <div class="form-input-item">
-                                <label for="email" class="label"> Email</label>
-                                <input type="text" name="telephone" placeholder="Номер телефона" id="tel">
+                            <div class="form__input__item">
+                                <label for="email" class="form__label"> Email</label>
+                                <input type="text" validate name="telephone" placeholder="Номер телефона" id="tel">
+                                <div class="form__error">Заполните поле!</div>
                             </div>
-                            <div class="form-input-item">
-                                <label for="message" class="label"> Message</label>
-                                <textarea rows="7" name="message" id="message" placeholder="Your Message"></textarea>
+                            <div class="form__input__item">
+                                <label for="message" class="form__label"> Message</label>
+                                <textarea rows="7" validate name="message" id="message" placeholder="Your Message"></textarea>
+                                <div class="form__error">Заполните поле!</div>
                             </div>
                         </div>
 
-                        <div class="form-button">
-                            <button type="submit" class="form-btn" value="SUBMIT">SUBMIT</button>
+                        <div class="form__button">
+                            <button type="submit" class="form__btn" value="SUBMIT">SUBMIT</button>
                         </div>
                     </form>
                 </div>
             </div>
+        </div>
+    </div>
+    <div class="succes" id="succes">
+        <div class="succes__overlay" id="succesOverlay"></div>
+        <div class="succes__body">
+            <div class="succes__content">Your message successfully sent</div>
         </div>
     </div>
 </body>
