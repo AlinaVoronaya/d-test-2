@@ -191,6 +191,9 @@ $basic-font-color: #1F3F68;
         background: #5A98D0;
         box-shadow: 5px 10px 20px rgba(53, 110, 173, 0.2);
         border-radius: 10px;
+        &:hover {
+            background: #316099;
+        }
     }
     &__img {
         position: absolute;
@@ -393,16 +396,19 @@ $basic-font-color: #1F3F68;
     }
     &__btn {
         max-height: 56px;
-        &-link {
-            @include gilroy-400;
-            font-size: 16px;
-            line-height: 26px;
-            letter-spacing: 0.04em;
-            padding: 15px 75px;
-            color: #fff;
-            background: #5A98D0;
-            box-shadow: 5px 10px 20px rgba(53, 110, 173, 0.2);
-            border-radius: 10px;
+    }
+    &__btn-link {
+        @include gilroy-400;
+        font-size: 16px;
+        line-height: 26px;
+        letter-spacing: 0.04em;
+        padding: 15px 75px;
+        color: #fff;
+        background: #5A98D0;
+        box-shadow: 5px 10px 20px rgba(53, 110, 173, 0.2);
+        border-radius: 10px;
+        &:hover {
+            background: #1F3F68;
         }
     }
 }
@@ -465,20 +471,20 @@ $basic-font-color: #1F3F68;
                 }
             }
         }
-        &-title {
-            @include gilroy-500;
-            font-size: 28px;
-            line-height: 46px;
-            letter-spacing: 0.02em;
-            color: #FFFFFF;
-            margin-bottom: 33px;
-            padding-left: 70px;
-            position: relative;
-            &::before {
-                content: url('../images/logo-footer.svg');
-                position: absolute;
-                left: 0;
-            }
+    }
+    &__afrianska-title {
+        @include gilroy-500;
+        font-size: 28px;
+        line-height: 46px;
+        letter-spacing: 0.02em;
+        color: #FFFFFF;
+        margin-bottom: 33px;
+        padding-left: 70px;
+        position: relative;
+        &::before {
+            content: url('../images/logo-footer.svg');
+            position: absolute;
+            left: 0;
         }
     }
     &__about {
@@ -492,14 +498,14 @@ $basic-font-color: #1F3F68;
         & li {
             margin-bottom: 16px;
         }
-        &-title {
-            @include gilroy-500;
-            font-size: 20px;
-            line-height: 30px;
-            letter-spacing: 0.05em;
-            color: #FFFFFF;
-            margin-bottom: 32px;
-        }
+    }
+    &__about-title {
+        @include gilroy-500;
+        font-size: 20px;
+        line-height: 30px;
+        letter-spacing: 0.05em;
+        color: #FFFFFF;
+        margin-bottom: 32px;
     }
     &__follow {
         @include gilroy-400;
@@ -511,14 +517,14 @@ $basic-font-color: #1F3F68;
         & li {
             margin-bottom: 16px;
         }
-        &-title {
-            @include gilroy-500;
-            font-size: 20px;
-            line-height: 30px;
-            letter-spacing: 0.05em;
-            color: #FFFFFF;
-            margin-bottom: 32px;
-        }
+    }
+    &__follow-title {
+        @include gilroy-500;
+        font-size: 20px;
+        line-height: 30px;
+        letter-spacing: 0.05em;
+        color: #FFFFFF;
+        margin-bottom: 32px;
     }
     &__copyright {
         padding-bottom: 64px;
@@ -595,38 +601,38 @@ $basic-font-color: #1F3F68;
     }
     &__input {
         margin-bottom: 72px;
-        &__item {
-            display: flex;
-            flex-direction: column;
-            margin-bottom: 32px;
-            &:last-child {
-                margin-bottom: 0;
-            }
-            & input {
-                border-radius: 10px;
-                border: 1px solid #356EAD;
-                padding: 21px 0 21px 42px;
+    }
+    &__input-item {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 32px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+        & input {
+            border-radius: 10px;
+            border: 1px solid #356EAD;
+            padding: 21px 0 21px 42px;
+            opacity: 0.4;
+            &::placeholder {
+                color: #1F3F68;
                 opacity: 0.4;
-                &::placeholder {
-                    color: #1F3F68;
-                    opacity: 0.4;
-                    @include gilroy-300;
-                    font-size: 16px;
-                    line-height: 30px;
-                }
+                @include gilroy-300;
+                font-size: 16px;
+                line-height: 30px;
             }
-            & textarea {
-                border-radius: 10px;
-                border: 1px solid #356EAD;
-                padding: 21px 42px;
-                opacity: 0.4;
-                &::placeholder {
-                    color: #1F3F68;
-                    opacity: 0.2;
-                    @include gilroy-300;
-                    font-size: 16px;
-                    line-height: 30px;
-                }
+        }
+        & textarea {
+            border-radius: 10px;
+            border: 1px solid #356EAD;
+            padding: 21px 42px;
+            opacity: 0.4;
+            &::placeholder {
+                color: #1F3F68;
+                opacity: 0.2;
+                @include gilroy-300;
+                font-size: 16px;
+                line-height: 30px;
             }
         }
     }
@@ -755,9 +761,9 @@ $basic-font-color: #1F3F68;
         }
         &__btn {
             max-height: 50px;
-            &-link {
-                padding: 15px 65px;
-            }
+        }
+        &__btn-link {
+            padding: 15px 65px;
         }
     }
 }
@@ -916,11 +922,11 @@ $basic-font-color: #1F3F68;
         }
         &__btn {
             max-height: 46px;
-            &-link {
-                font-size: 14px;
-                line-height: 24px;
-                padding: 15px 45px;
-            }
+        }
+        &__btn-link {
+            font-size: 14px;
+            line-height: 24px;
+            padding: 15px 45px;
         }
         &__line {
             height: 1px;
@@ -945,16 +951,16 @@ $basic-font-color: #1F3F68;
             & li {
                 margin-bottom: 20px;
             }
-            &-title {
-                font-size: 24px;
-                line-height: 30px;
-                margin-bottom: 28px;
-                &::before {
-                    content: url('../images/logo-footer.svg');
-                    position: absolute;
-                    left: 0;
-                    top: -5px;
-                }
+        }
+        &__afrianska-title {
+            font-size: 24px;
+            line-height: 30px;
+            margin-bottom: 28px;
+            &::before {
+                content: url('../images/logo-footer.svg');
+                position: absolute;
+                left: 0;
+                top: -5px;
             }
         }
         &__about {
@@ -964,11 +970,11 @@ $basic-font-color: #1F3F68;
             & li {
                 margin-bottom: 14px;
             }
-            &-title {
-                font-size: 18px;
-                line-height: 25px;
-                margin-bottom: 28px;
-            }
+        }
+        &__about-title {
+            font-size: 18px;
+            line-height: 25px;
+            margin-bottom: 28px;
         }
         &__follow {
             font-size: 14px;
@@ -976,11 +982,11 @@ $basic-font-color: #1F3F68;
             & li {
                 margin-bottom: 14px;
             }
-            &-title {
-                font-size: 18px;
-                line-height: 25px;
-                margin-bottom: 28px;
-            }
+        }
+        &__follow-title {
+            font-size: 18px;
+            line-height: 25px;
+            margin-bottom: 28px;
         }
         &__copyright {
             padding-bottom: 54px;
@@ -997,16 +1003,16 @@ $basic-font-color: #1F3F68;
     .form {
         &__input {
             margin-bottom: 42px;
-            &__item {
-                margin-bottom: 22px;
-                & input {
-                    padding: 18px 0 18px 32px;
-                }
-                & textarea {
-                    border-radius: 10px;
-                    border: 1px solid #356EAD;
-                    padding: 18px 32px;
-                }
+        }
+        &__input-item {
+            margin-bottom: 22px;
+            & input {
+                padding: 18px 0 18px 32px;
+            }
+            & textarea {
+                border-radius: 10px;
+                border: 1px solid #356EAD;
+                padding: 18px 32px;
             }
         }
         &__btn {
@@ -1118,10 +1124,10 @@ $basic-font-color: #1F3F68;
             & li {
                 margin-bottom: 17px;
             }
-            &-title {
-                &::before {
-                    top: -7px;
-                }
+        }
+        &__afrianska-title {
+            &::before {
+                top: -7px;
             }
         }
         &__about {
@@ -1131,11 +1137,11 @@ $basic-font-color: #1F3F68;
             & li {
                 margin-bottom: 12px;
             }
-            &-title {
-                font-size: 18px;
-                line-height: 25px;
-                margin-bottom: 28px;
-            }
+        }
+        &__about-title {
+            font-size: 18px;
+            line-height: 25px;
+            margin-bottom: 28px;
         }
         &__follow {
             font-size: 14px;
@@ -1143,11 +1149,11 @@ $basic-font-color: #1F3F68;
             & li {
                 margin-bottom: 12px;
             }
-            &-title {
-                font-size: 18px;
-                line-height: 25px;
-                margin-bottom: 28px;
-            }
+        }
+        &__follow-title {
+            font-size: 18px;
+            line-height: 25px;
+            margin-bottom: 28px;
         }
         &__copyright {
             padding-bottom: 54px;
@@ -1164,16 +1170,16 @@ $basic-font-color: #1F3F68;
     .form {
         &__input {
             margin-bottom: 32px;
-            &__item {
-                margin-bottom: 16px;
-                & input {
-                    padding: 14px 0 14px 26px;
-                }
-                & textarea {
-                    border-radius: 10px;
-                    border: 1px solid #356EAD;
-                    padding: 14px 26px;
-                }
+        }
+        &__input-item {
+            margin-bottom: 16px;
+            & input {
+                padding: 14px 0 14px 26px;
+            }
+            & textarea {
+                border-radius: 10px;
+                border: 1px solid #356EAD;
+                padding: 14px 26px;
             }
         }
         &__btn {
@@ -1278,16 +1284,16 @@ $basic-font-color: #1F3F68;
         }
         &__input {
             margin-bottom: 22px;
-            &__item {
-                margin-bottom: 12px;
-                & input {
-                    padding: 14px 0 14px 26px;
-                }
-                & textarea {
-                    border-radius: 10px;
-                    border: 1px solid #356EAD;
-                    padding: 14px 26px;
-                }
+        }
+        &__input-item {
+            margin-bottom: 12px;
+            & input {
+                padding: 14px 0 14px 26px;
+            }
+            & textarea {
+                border-radius: 10px;
+                border: 1px solid #356EAD;
+                padding: 14px 26px;
             }
         }
         &__btn {
