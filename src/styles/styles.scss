@@ -227,58 +227,59 @@ $basic-font-color: #1F3F68;
             padding-left: 56px;
         }
     }
-    &__card {
-        @media (min-width: 991.98px) {
-            box-shadow: 5px 20px 50px rgba(16, 112, 177, 0.2);
-            border-radius: 10px;
-            padding: 48px 48px 0 48px;
-            display: grid;
-            &__img {
-                margin: 0 auto 56px auto;
-            }
-            &__title {
-                @include gilroy-500;
-                font-size: 20px;
-                line-height: 30px;
-                letter-spacing: 0.05em;
-                color: $basic-font-color;
-                margin-bottom: 16px;
-            }
-            &__text {
-                @include gilroy-400;
-                font-size: 16px;
-                line-height: 26px;
-                letter-spacing: 0.05em;
-                color: $basic-font-color;
-                margin-bottom: 32px;
-            }
-            &__link {
-                @include gilroy-500;
-                font-size: 14px;
-                line-height: 30px;
-                letter-spacing: 0.05em;
-                margin-bottom: 48px;
-                & a {
-                    color: #5A98D0;
-                    &::after {
-                        content: url('../images/arrow.svg');
-                        position: relative;
-                        left: 24px;
-                        top: 7px;
-                    }
+}
+
+.suggestion-card {
+    @media (min-width: 991.98px) {
+        box-shadow: 5px 20px 50px rgba(16, 112, 177, 0.2);
+        border-radius: 10px;
+        padding: 48px 48px 0 48px;
+        display: grid;
+        &__img {
+            margin: 0 auto 56px auto;
+        }
+        &__title {
+            @include gilroy-500;
+            font-size: 20px;
+            line-height: 30px;
+            letter-spacing: 0.05em;
+            color: $basic-font-color;
+            margin-bottom: 16px;
+        }
+        &__text {
+            @include gilroy-400;
+            font-size: 16px;
+            line-height: 26px;
+            letter-spacing: 0.05em;
+            color: $basic-font-color;
+            margin-bottom: 32px;
+        }
+        &__link {
+            @include gilroy-500;
+            font-size: 14px;
+            line-height: 30px;
+            letter-spacing: 0.05em;
+            margin-bottom: 48px;
+            & a {
+                color: #5A98D0;
+                &::after {
+                    content: url('../images/arrow.svg');
+                    position: relative;
+                    left: 24px;
+                    top: 7px;
                 }
             }
-            &:nth-child(1) {
-                grid-area: card1;
-                align-self: center;
-            }
-            &:nth-child(2) {
-                grid-area: card2;
-                padding-top: 0;
-            }
-            &:nth-child(3) {
-                grid-area: card3;
-            }
+        }
+        &:nth-child(1) {
+            grid-area: card1;
+            align-self: center;
+        }
+        &:nth-child(2) {
+            grid-area: card2;
+            padding-top: 0;
+        }
+        &:nth-child(3) {
+            grid-area: card3;
         }
     }
 }
@@ -804,49 +805,49 @@ $basic-font-color: #1F3F68;
             gap: 50px;
             padding-left: 40px;
         }
-        &__card {
-            box-shadow: 5px 20px 50px rgba(16, 112, 177, 0.2);
-            border-radius: 10px;
-            padding: 48px 48px 0 48px;
-            display: grid;
-            &__img {
-                margin: 0 auto 40px auto;
-            }
-            &__title {
-                @include gilroy-500;
-                font-size: 20px;
-                line-height: 30px;
-                letter-spacing: 0.05em;
-                color: $basic-font-color;
-                margin-bottom: 16px;
-            }
-            &__text {
-                @include gilroy-400;
-                font-size: 16px;
-                line-height: 26px;
-                letter-spacing: 0.05em;
-                color: $basic-font-color;
-                margin-bottom: 32px;
-            }
-            &__link {
-                @include gilroy-500;
-                font-size: 14px;
-                line-height: 30px;
-                letter-spacing: 0.05em;
-                margin-bottom: 48px;
-                & a {
-                    color: #5A98D0;
-                    &::after {
-                        content: url('../images/arrow.svg');
-                        position: relative;
-                        left: 24px;
-                        top: 7px;
-                    }
+    }
+    .suggestion-card {
+        box-shadow: 5px 20px 50px rgba(16, 112, 177, 0.2);
+        border-radius: 10px;
+        padding: 48px 48px 0 48px;
+        display: grid;
+        &__img {
+            margin: 0 auto 40px auto;
+        }
+        &__title {
+            @include gilroy-500;
+            font-size: 20px;
+            line-height: 30px;
+            letter-spacing: 0.05em;
+            color: $basic-font-color;
+            margin-bottom: 16px;
+        }
+        &__text {
+            @include gilroy-400;
+            font-size: 16px;
+            line-height: 26px;
+            letter-spacing: 0.05em;
+            color: $basic-font-color;
+            margin-bottom: 32px;
+        }
+        &__link {
+            @include gilroy-500;
+            font-size: 14px;
+            line-height: 30px;
+            letter-spacing: 0.05em;
+            margin-bottom: 48px;
+            & a {
+                color: #5A98D0;
+                &::after {
+                    content: url('../images/arrow.svg');
+                    position: relative;
+                    left: 24px;
+                    top: 7px;
                 }
             }
-            &:nth-child(2) {
-                padding-top: 0;
-            }
+        }
+        &:nth-child(2) {
+            padding-top: 0;
         }
     }
     .client {
@@ -1049,17 +1050,17 @@ $basic-font-color: #1F3F68;
             gap: 30px;
             padding-left: 40px;
         }
-        &__card {
-            box-shadow: 5px 20px 50px rgba(16, 112, 177, 0.2);
-            border-radius: 10px;
-            padding: 48px 48px 0 48px;
-            display: grid;
-            &__img {
-                margin: 0 auto 40px auto;
-            }
-            &:nth-child(2) {
-                padding-top: 10px;
-            }
+    }
+    .suggestion-card {
+        box-shadow: 5px 20px 50px rgba(16, 112, 177, 0.2);
+        border-radius: 10px;
+        padding: 48px 48px 0 48px;
+        display: grid;
+        &__img {
+            margin: 0 auto 40px auto;
+        }
+        &:nth-child(2) {
+            padding-top: 10px;
         }
     }
     .client {
@@ -1215,9 +1216,9 @@ $basic-font-color: #1F3F68;
             gap: 30px;
             padding-left: 0;
         }
-        &__card {
-            padding: 36px 36px 0 36px;
-        }
+    }
+    .suggestion-card {
+        padding: 36px 36px 0 36px;
     }
     .client {
         padding: 76px 20px 80px 60px;
