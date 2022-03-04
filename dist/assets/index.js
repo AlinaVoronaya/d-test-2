@@ -1,1 +1,0 @@
-console.log("Hello World!"),"development"===process.env.NODE_ENV&&require("../index.html");

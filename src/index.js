@@ -64,7 +64,7 @@ form.onsubmit = function(event) {
     console.log(hasErrors);
     if (!hasErrors) {
         closeModal();
-        setTimeout(showSucces, 800);
+        showSucces();
     }
 };
 

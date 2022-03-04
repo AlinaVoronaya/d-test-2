@@ -545,7 +545,6 @@ $basic-font-color: #1F3F68;
     left: 0;
     overflow-y: auto;
     visibility: hidden;
-    transition: all 0.8s ease 0s;
     &__overlay {
         position: fixed;
         top: 0;
@@ -568,16 +567,9 @@ $basic-font-color: #1F3F68;
         box-shadow: 5px 10px 50px rgba(16, 112, 177, 0.2);
         border-radius: 10px;
         position: relative;
-        transition: all 0.8s ease 0s;
-        opacity: 0;
-        transform: perspective(600px) translate(0px, -100%) rotateX(45deg);
     }
     &--open {
         visibility: visible;
-        opacity: 1;
-    }
-    &--open .modal__content {
-        transform: perspective(600px) translate(0px, 0%) rotateX(0deg);
         opacity: 1;
     }
     &__close {
