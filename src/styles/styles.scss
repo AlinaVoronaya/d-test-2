@@ -181,7 +181,7 @@ $basic-font-color: #1F3F68;
     &__btn {
         margin-bottom: 150px;
     }
-    &__btn__link {
+    &__btn-link {
         @include gilroy-400;
         font-size: 16px;
         line-height: 26px;
@@ -392,7 +392,7 @@ $basic-font-color: #1F3F68;
     }
     &__btn {
         max-height: 56px;
-        &__link {
+        &-link {
             @include gilroy-400;
             font-size: 16px;
             line-height: 26px;
@@ -464,7 +464,7 @@ $basic-font-color: #1F3F68;
                 }
             }
         }
-        &__title {
+        &-title {
             @include gilroy-500;
             font-size: 28px;
             line-height: 46px;
@@ -491,7 +491,7 @@ $basic-font-color: #1F3F68;
         & li {
             margin-bottom: 16px;
         }
-        &__title {
+        &-title {
             @include gilroy-500;
             font-size: 20px;
             line-height: 30px;
@@ -510,7 +510,7 @@ $basic-font-color: #1F3F68;
         & li {
             margin-bottom: 16px;
         }
-        &__title {
+        &-title {
             @include gilroy-500;
             font-size: 20px;
             line-height: 30px;
@@ -735,7 +735,7 @@ $basic-font-color: #1F3F68;
         &__btn {
             margin-bottom: 110px;
         }
-        &__btn__link {
+        &__btn-link {
             font-size: 14px;
             line-height: 24px;
             padding: 13px 42px;
@@ -754,7 +754,7 @@ $basic-font-color: #1F3F68;
         }
         &__btn {
             max-height: 50px;
-            &__link {
+            &-link {
                 padding: 15px 65px;
             }
         }
@@ -779,7 +779,7 @@ $basic-font-color: #1F3F68;
         &__btn {
             margin-bottom: 130px;
         }
-        &__btn__link {
+        &__btn-link {
             line-height: 24px;
         }
         &__img {
@@ -915,7 +915,7 @@ $basic-font-color: #1F3F68;
         }
         &__btn {
             max-height: 46px;
-            &__link {
+            &-link {
                 font-size: 14px;
                 line-height: 24px;
                 padding: 15px 45px;
@@ -944,7 +944,7 @@ $basic-font-color: #1F3F68;
             & li {
                 margin-bottom: 20px;
             }
-            &__title {
+            &-title {
                 font-size: 24px;
                 line-height: 30px;
                 margin-bottom: 28px;
@@ -963,7 +963,7 @@ $basic-font-color: #1F3F68;
             & li {
                 margin-bottom: 14px;
             }
-            &__title {
+            &-title {
                 font-size: 18px;
                 line-height: 25px;
                 margin-bottom: 28px;
@@ -975,7 +975,7 @@ $basic-font-color: #1F3F68;
             & li {
                 margin-bottom: 14px;
             }
-            &__title {
+            &-title {
                 font-size: 18px;
                 line-height: 25px;
                 margin-bottom: 28px;
@@ -1117,7 +1117,7 @@ $basic-font-color: #1F3F68;
             & li {
                 margin-bottom: 17px;
             }
-            &__title {
+            &-title {
                 &::before {
                     top: -7px;
                 }
@@ -1130,7 +1130,7 @@ $basic-font-color: #1F3F68;
             & li {
                 margin-bottom: 12px;
             }
-            &__title {
+            &-title {
                 font-size: 18px;
                 line-height: 25px;
                 margin-bottom: 28px;
@@ -1142,7 +1142,7 @@ $basic-font-color: #1F3F68;
             & li {
                 margin-bottom: 12px;
             }
-            &__title {
+            &-title {
                 font-size: 18px;
                 line-height: 25px;
                 margin-bottom: 28px;
