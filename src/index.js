@@ -27,7 +27,8 @@ closeOverlay.onclick = function(event) {
 function closeModal() {
     let modal = document.getElementById('modal');
     modal.classList.remove('modal--open');
-    document.body.style.overflow = '';
+    document.body.style.overflow = 'hidden';
+    document.body.style.width = '100%';
     const form = document.getElementById('form');
     resetForm(form);
 }
@@ -65,12 +66,14 @@ form.onsubmit = function(event) {
     console.log(hasErrors);
     if (!hasErrors) {
         closeModal();
-        let succes = document.getElementById('succes');
-        succes.classList.add('succes--open');
-        document.body.style.overflow = 'hidden';
-        document.body.style.width = '100%';
+        setTimeout(showSucces, 800);
     }
 };
+
+function showSucces() {
+    let succes = document.getElementById('succes');
+    succes.classList.add('succes--open');
+}
 
 function resetForm(form) {
     for (const element of form.elements) {
