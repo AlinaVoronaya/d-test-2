@@ -27,7 +27,7 @@ closeOverlay.onclick = function(event) {
 function closeModal() {
     let modal = document.getElementById('modal');
     modal.classList.remove('modal--open');
-    document.body.style.overflow = 'hidden';
+    document.body.style.overflow = '';
     document.body.style.width = '100%';
     const form = document.getElementById('form');
     resetForm(form);
@@ -48,8 +48,6 @@ const form = document.getElementById("form");
 form.onsubmit = function(event) {
     event.preventDefault();
     const form = event.target;
-    // event - событие
-    // target - куда кликнули
     console.log(form.elements);
     let hasErrors = false;
     for (const element of form.elements) {
